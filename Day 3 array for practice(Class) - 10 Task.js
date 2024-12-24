@@ -57,23 +57,125 @@
 // function sumEveryNth (a,b){
 //    let sum = 0
 //    a.forEach((e,i)=>{
-//     if (i % b == 0){
+//     if ((i+1) % b == 0){
 //         sum += e
 //     }
 //    })
 //    return sum
 // }
-// console.log( sumEveryNth([4, 8, 6, 6, 7, 9, 3], 1));
-
+// console.log( sumEveryNth([7, 3, 10, 4, 5, 8, 4, 9, 6, 9, 10, 1, 4], 4));
 
 // #6
-
+//depth
+// function depth (array){
+//     let cnt = 0
+//     for (let i = array ; i != undefined ; i = i[0]){
+//         cnt++
+//     }
+//     return cnt
+// }
 
 // #7
-function numberBoom(a,b){
-   return a.find((e,i,ar)=>{
-     return b == e ?"Boom" :"a,balc" 
-   })
+// function numberBoom(a,b){
+//   return  a.find((e)=>{
+//       return e==b
+//   })==b?"Boom":`there is no ${b} in the array`
+// }
+// console.log(numberBoom([1, 2, 3, 4, 5, 6], 6));
 
-}
-console.log( numberBoom([1, 2, 3, 4, 5, 6, 7], 7));
+// #8
+// function sumArraysSort(...arrays){
+//   let sum = 0
+//   let array = []
+//   arrays.map((e)=> {
+//     e.map((e)=>{
+//       sum += e
+//     })
+//   })
+// }
+
+//#9
+//factelement
+// function factelement(a){
+//     let array = []
+//     a.map((e)=>{
+//         let fact = 1
+//         for ( let i = 1 ; i <= e ; i ++){
+//           fact *= i
+//         }
+//         array.push(fact)
+//     })
+//     return array
+// }
+
+// #10
+// function prime (a){
+//     for (let i = 0 ; i < a.length ; i ++){ //9
+//         for (let f = a[i]-1 ; f > 1 ; f--){ // 8 7 6 5 4 3
+//             if (a[i] % f == 0){ // flase treu
+//                 return false // false
+//             }
+//         }
+//     }
+//     return true
+// }
+// console.log(prime([2,9]));
+
+// #11
+//indexnum
+// function indexnum(a,b){
+//     let arr = []
+//     a.forEach((e,index)=>{ //[0] [1]
+//         e.forEach((e)=>{ // 1 2  1 2
+//             if(e==b){ // false true false true
+//                 arr.push(index) // arr[0,1]
+//             }
+//         })
+//     })
+//     return arr
+// }
+// console.log(indexnum([[1,2],[1,2]],2));
+
+// #12
+//indexequal
+// function indexequal(a){
+//     return a.every((e,i)=> e == i)
+// }
+
+// #13
+// function random(n,min,max){
+//     let arr = []
+//     for (let i = 0 ; i < n ; i++){
+//         arr.push( Math.floor(Math.random() * (max - min + 1)) + min)
+//     }
+//     return arr
+// }
+// console.log(random(10,1,10));
+
+
+// #14
+//notlength
+// function notlength(a){
+//     let n = 0
+//     a.map((e)=> n++)
+//     return n
+// }
+
+// #15
+//getAlphabetIndices
+// function getAlphabetIndices(str) {
+//     let alphabet = "abcdefghijklmnopqrstuvwxyz";
+//     let array = []
+//     for (let i = 0; i < str.length; i++) {
+//       const char = str[i].toLowerCase()
+//       for (let j = 0; j < alphabet.length; j++) {
+//         if (char == alphabet[j]) {
+//           array.push(j + 1)
+//           break
+//         }
+//       }
+//     }
+//     return array
+//   }
+//   console.log(getAlphabetIndices("abc"));
+  
